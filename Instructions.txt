@@ -1,0 +1,21 @@
+For adding custom implementation: (Shown with custom implementation of random policy)
+
+1. Add name of the algorithm in the enum class.
+2. Import that into Cache.h file.
+3. Implement the <algorithm>EvictionPolicy.h file and inherit from EvictionPolicy class and add all the functions for that class.
+4. Done! Whenever want to use, call with that EvictionPolicy
+
+For running:
+Compile: g++ *.cpp
+Run: ./a.out
+
+For running with different Eviction Policies, just change, the enum name for the relevavnt Policy in the cache object declaration:
+
+Eg: For this: Cache<int, int> cache(capacity, EvictionPolicyType::FIFO);
+
+If want to run with LRU: just change FIFO -> LRU, the object would like this: Cache<int, int> cache(capacity, EvictionPolicyType::LRU);
+
+
+
+
+
